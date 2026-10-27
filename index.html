@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miaoji</title>
+<style>
+  :root {
+    --fg: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: #e6e6e6;
+    --bg: #fafaf9;
+    --accent: #1a1a1a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 64px 24px;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 680px; margin: 0 auto; }
+  header { margin-bottom: 48px; }
+  h1 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+  }
+  header p { margin: 0; color: var(--muted); font-size: 15px; }
+  h2 {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 16px;
+  }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li + li { border-top: 1px solid var(--line); }
+  li a {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 16px 4px;
+    color: var(--fg);
+    text-decoration: none;
+    transition: padding-left .18s ease, color .18s ease;
+  }
+  li a:hover { padding-left: 10px; color: #000; }
+  li a .name { font-size: 16px; font-weight: 500; }
+  li a .desc { font-size: 14px; color: var(--muted); margin-left: auto; }
+  li a .arrow { color: #c0c0c0; }
+  .empty {
+    padding: 28px 4px;
+    color: var(--muted);
+    font-size: 15px;
+    border-top: 1px solid var(--line);
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Miaoji</h1>
+    <p>静态页面集合</p>
+  </header>
+
+  <section>
+    <h2>页面</h2>
+    <ul id="pages">
+      <!-- 新增页面：复制下面一行，改 href 和标题
+      <li><a href="./page.html"><span class="name">页面标题</span><span class="desc">说明</span><span class="arrow">→</span></a></li>
+      -->
+    </ul>
+    <div class="empty">还没有页面。把 HTML 文件放进这个目录，然后在这里加一行链接。</div>
+  </section>
+
+  <footer>Deployed with GitHub Pages</footer>
+</main>
+</body>
+</html>
